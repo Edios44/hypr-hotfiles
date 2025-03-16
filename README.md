@@ -55,4 +55,5 @@ stow .
 ### Links
 
 [Hyprland Wiki](https://wiki.hyprland.org/) *the amazing hyprland wiki*
+
 [Screen sharing guide on hyprland by brunoanc](https://gist.github.com/brunoanc/2dea6ddf6974ba4e5d26c3139ffb7580) *great guide, refer for screensharing on hyprland*
