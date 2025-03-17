@@ -1,29 +1,16 @@
-@define-color bg #1E1E2E;
-@define-color fg #FDFFFC;
-
-@define-color surface #45475a;
-
-@define-color green #2EC4B6;
-@define-color red #FE4F2D;
-@define-color orange #FF9F1C;
-@define-color mauve #A5158C;
-
-*{
+* {
     /* `otf-font-awesome` is required to be installed for icons */
 }
 
-#waybar {
-  background-color: transparent;
-}
-#waybar > box {
-    background-color: @bg;
+window#waybar {
+    background-color: rgba(43, 48, 59, 0.5);
     font-family: Fira Mono Nerd Font,FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    margin:0px 0px 4px 0px;
+
     font-size: 15px;
-    color: @fg;
+    /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
+    color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
-    box-shadow: 1 1 3 1px #151515;
 }
 
 window#waybar.hidden {
@@ -31,27 +18,39 @@ window#waybar.hidden {
 }
 
 #workspaces {
-    background-color: @surface;
-    font-family: Fira Mono Nerd Font;
-    border-radius:6px;
+    background-color: #D3D3D3;
+    color: black;
+    font-family: Source Han Sans;
+    border-radius:10px;
     padding-left:8px;
     padding-right:8px;
+
 }
 
 .modules-right {
-    background-color: @surface;
-    border-radius: 6px;
+    background-color: #D3D3D3;
+    border-radius: 10px;
     padding-left: 8px;
     padding-right: 8px;
-    margin: 6px;
+
 }
-.modules-center {
-  margin: 6px;
+/*
+window#waybar.empty {
+    background-color: transparent;
 }
-.modules-left {
-  margin: 6px;
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+    background-color: #3F3F3F;
 }
 
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
@@ -64,6 +63,7 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
 }
 
 /* you can set a style on hover for any module like this */
@@ -71,20 +71,20 @@ button:hover {
     background-color: #a37800;
 }
 
-#workspaces label{
-  color: @fg;
-}
-
 #workspaces button {
-    padding: 0 7px;
+    padding: 0 5px;
     background-color: transparent;
+    color: #ffffff;
 }
 
 #workspaces button:hover {
-  background-color: #64727D;
+    background: rgba(0, 0, 0, 0.2);
 }
 
 #workspaces button.active {
+    background-color: #64727D;
+    color: white;
+    box-shadow: inset 0 -3px #ffffff;
 }
 
 #workspaces button.urgent {
@@ -106,31 +106,7 @@ button:hover {
 #temperature,
 #backlight,
 #pulseaudio {
-	color : @fg;
-  font-family: ubuntu mono Nerd Font;
-}
-
-#battery{
-  color: @green;
-}
-#network{
-  color: @red;
-}
-#pulseaudio{
-  color: @orange;
-}
-#clock {
-  font-family: ubuntu mono Nerd Font;
-  background-color: #64727D;
-  margin-left: 8px;
-  margin-right: 8px;
-  border-radius: 6px;
-}
-#window{
-  background-color: #64727D;
-  border-radius: 8px;
-  padding: 4px;
-  margin: 8px;
+	color : black;
 }
 
 
@@ -170,6 +146,9 @@ button:hover {
     margin-right: 0;
 }
 
+#clock {
+    background-color: #64727D;
+}
 
 /*#battery {
     background-color: #ffffff;

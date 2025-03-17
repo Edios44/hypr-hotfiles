@@ -2,48 +2,56 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 35, // Waybar height (to be removed for auto height)
+    "height": 20, // Waybar height (to be removed for auto height)
     //"width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
         "tray",
         "hyprland/window",
+        "hyprland/submap",
+        "hyprland/scratchpad",
         "custom/spotify"
     ],
     "modules-center": [
         "hyprland/workspaces"
     ],
     "modules-right": [
-        "battery",
-        "battery#bat2",
+        "mpd",
         "pulseaudio",
         "network",
+        "power-profiles-daemon",
+        "temperature",
+        "backlight",
+        "battery",
+        "battery#bat2",
         "clock",
         "custom/notification"
+        //"custom/power"
     ],
     // Modules configuration
     "hyprland/workspaces": {
         //"disable-scroll": true,
-
-        "persistent-workspaces":{
-          "1":[],
-          "2":[],
-          "3":[],
-          "4":[],
-          "5":[],
-          "6":[],
-          "7":[],
-          "8":[]
-        } ,
+	"active-only": false,
+        "all-outputs": true,
         //"warp-on-scroll": false,
-        "format": "{icon}",
+        //"format": "{icon}",
         "format-icons": {
-            "urgent": "",
-            "default": "",
-            "empty":"",
-            "active": ""
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+	          "6": "六",
+	          "7": "七",
+	          "8": "八",
+	          "9": "九",
+	          "10": "十"
+            //"urgent": "",
+            //"focused": "",
+            //"default": ""
          },
+	"format": "<span color='black'>{icon}</span>"
      },
 
      "hyprland/language": {
@@ -169,7 +177,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": " ",
+        "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
@@ -178,11 +186,11 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": " {icon} {format_source}",
-        "format-bluetooth": " {icon} {format_source}",
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "",
+        "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
