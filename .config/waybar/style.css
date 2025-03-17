@@ -115,6 +115,7 @@ button:hover {
 }
 #network{
   color: @red;
+  margin-right: 10px;
 }
 #pulseaudio{
   color: @orange;
@@ -131,6 +132,12 @@ button:hover {
   border-radius: 8px;
   padding: 4px;
   margin: 8px;
+}
+#custom-keyboard-layout {
+  font-family: ubuntu mono Nerd Font;
+  background-color: #64727D;
+  padding: 4px;
+  border-radius: 8px;
 }
 
 
