@@ -25,12 +25,12 @@ yay -S nerd-fonts
 install the following :
 
 ```
-yay -S hyprpolkitagent-git xdg-desktop-portal-hyprland-git hyprsunset-git hyprshot-git
+yay -S hyprpolkitagent-git xdg-desktop-portal-hyprland-git hyprsunset-git hyprshot-git hyprpaper-git
 ```
 
 also :
 ```
-pacman -S wofi nemo swaync brightnessctl cliphist
+pacman -S wofi nemo swaync brightnessctl cliphist waybar
 ```
 
 ### Optional Dependencies
