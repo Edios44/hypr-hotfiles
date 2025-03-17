@@ -30,7 +30,7 @@ yay -S hyprpolkitagent-git xdg-desktop-portal-hyprland-git hyprsunset-git hyprsh
 
 also :
 ```
-pacman -S wofi nemo swaync brightnessctl
+pacman -S wofi nemo swaync brightnessctl cliphist
 ```
 
 ### Optional Dependencies
