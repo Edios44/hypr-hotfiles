@@ -3,3 +3,5 @@ live_config_reload = true
 [window]
 blur = true
 opacity = 0.8
+[font]
+normal = {family = "Hack Nerd Font",style = "regular"}

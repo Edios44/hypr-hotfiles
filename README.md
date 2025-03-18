@@ -14,11 +14,16 @@ it is recommended to use the `hyprland-git` package for **hyprland**
 
 Ensure the following  Dependencies on your system
 
-### Nerd Fonts
+### Fonts
 install the nerd fonts package from the **aur** for arch linux users :
 
 ```
 yay -S nerd-fonts
+```
+font awesome are also required 
+
+```
+pacman -S ttf-font-awesome
 ```
 ### Other Dependencies
 
